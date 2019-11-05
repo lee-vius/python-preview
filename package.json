@@ -502,7 +502,7 @@
         "tslint": "^5.8.0",
         "typescript": "^2.6.1",
         "underscore": "^1.9.1",
-        "vscode": "^1.1.6"
+        "vscode": "^1.1.36"
     },
     "dependencies": {
         "tree-kill": "^1.2.0",
