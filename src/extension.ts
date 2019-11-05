@@ -6,6 +6,7 @@ import { CommandManager } from './common/commandManager';
 import * as commands from './commands';
 
 export function activate(context: vscode.ExtensionContext) {
+    console.log('Hello world!');
     const logger = new Logger();
 
     const contentProvider = new PythonContentProvider(context, logger);
@@ -24,5 +25,5 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(vscode.workspace.onDidChangeConfiguration(() => {
         logger.updateConfiguration();
         previewManager.updateConfiguration();
-    }))
+    }));
 }

@@ -21,7 +21,7 @@ window.addEventListener('message', event => {
                 state.startingInstruction = visualizer.curInstr;
                 vscode.setState(state);
                 messagePoster.postMessage('updateStartingInstruction', { curInstr: visualizer.curInstr });
-            }
+            };
             pyOutputPane = new ExecutionVisualizer('pyOutputPane', event.data.data, event.data.options);
             pyOutputPane.redrawConnectors();
             break;
