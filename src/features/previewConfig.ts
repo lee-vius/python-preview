@@ -153,13 +153,13 @@ class ContentConfiguration {
 
 class TraceConfiguration {
     [key: string]: any;
-    public readonly cumulativeMode: boolean;
+    public readonly showAllFrames: boolean;
     public readonly allowAllModules: boolean;
 
     public readonly maxExecutedLines: number;
 
     public constructor(pythonConfig: vscode.WorkspaceConfiguration) {
-        this.cumulativeMode = !!pythonConfig.get<boolean>('cumulativeMode', false);
+        this.showAllFrames = !!pythonConfig.get<boolean>('showAllFrames', true);
         this.allowAllModules = !!pythonConfig.get<boolean>('allowAllModules', true);
         this.maxExecutedLines = Math.max(1000, +pythonConfig.get<number>('maxExecutedLines', 1000));
     }
